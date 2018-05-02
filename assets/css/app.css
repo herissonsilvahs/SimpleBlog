@@ -1,0 +1,125 @@
+*{ padding: 0; }
+
+@font-face{
+	font-family: 'Cinzel';
+	src: url('../fonts/Cinzel/Cinzel-Regular.ttf') format('truetype');
+}
+
+@font-face{
+	font-family: 'Concert-One';
+	src: url('../fonts/Concert_One/ConcertOne-Regular.ttf') format('truetype');
+}
+
+@font-face{
+	font-family: 'Cormorant-Unicase';
+	src: url('../fonts/Cormorant_Unicase/CormorantUnicase-Regular.ttf') format('truetype'),
+	src: url('../fonts/Cormorant_Unicase/CormorantUnicase-Bold.ttf') format('truetype');
+}
+
+@font-face{
+	font-family: 'Amatic-SC';
+	src: url('../fonts/Amatic_SC/AmaticSC-Regular.ttf') format('truetype'),
+	src: url('../fonts/Amatic_SC/AmaticSC-Bold.ttf') format('truetype');
+}
+
+@font-face{
+	font-family: 'Cormorant-Garamond';
+	src: url('../fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf') format('truetype'),
+	src: url('../fonts/Cormorant_Garamond/CormorantGaramond-Bold.ttf') format('truetype');
+}
+
+.grid-container { max-width: 95rem; background: rgb(250, 250, 250); } /* Sobrescrevendo valor padrão do framework */
+
+/* Header Start */
+
+.header{ background: #303F9F; height: 10em; text-align: center; margin-bottom: 2em;}
+.header-content{ width: 100%; height: 100%; padding-top: 3.5em; box-shadow: 0px 1px 4px black;}
+.header-content #header-title{
+	color: #EDEDED;
+	font-family: Cormorant-Unicase; 
+	font-size: 28pt; 
+	line-height: 0.5; 
+	font-style: bold;
+	text-shadow: 1px 1px 3px black;
+}
+.header-content #header-description{
+	color: #DCDCDC;
+	font-family: Concert-One;
+	font-size: 12pt;
+	line-height: 0.5;
+	text-shadow: 1px 1px 3px black;
+}
+.header-content .header-menu{ margin-top: 5px; }
+.header-content .header-menu li a{ color: white; }
+/*.header-menu li a:hover{ border-bottom: 1px solid white;}*/
+.header-content .header-menu li a i{ font-size: 21pt; text-shadow: 1px 1px 2px black;}
+/* Header End */
+
+/* Post Start */
+
+.content-post{ margin-bottom: 2em; }
+
+.content-post .post-title{
+	font-family: Amatic-SC;
+	font-style: bold;
+	font-size: 17pt;
+	line-height: 1.0;
+	text-shadow: 1px 1px 1px black;
+}
+.content-post .post-author{ font-size: 8pt; font-family: Amatic-SC;}
+.post-author .post-subject{
+	background: blue;
+	color: white; 
+	padding: 3px; 
+	font-style: bold;  
+	padding-left: 5px; 
+	padding-right: 5px;
+}
+
+.post-subject.blue{ background: blue; }
+.post-subject.red{ background: red; }
+.post-subject.brown{ background: brown; }
+.post-subject.purple{ background: purple; }
+
+.content-post .post-paragraph{
+	font-family: Cormorant-Garamond; 
+	font-size: 11pt;
+	text-align: justify; 
+	word-wrap: break-word;
+	margin-top: 10px;
+}
+.content-post .post-date{ font-size: 9pt; font-family: Amatic-SC; float: right;}
+
+/* Post End*/
+
+/* Medium and up */
+@media screen and (min-width: 40em)
+{
+	/* Header Start */
+	.header .header-content{ padding-top: 2em; }
+	.header-content #header-title{
+		font-size: 32pt; 
+		line-height: 0.8; 
+		font-style: bold;
+		text-shadow: 1px 1px 3px black;
+	}
+	.header-content #header-description{
+		color: #DCDCDC;
+		font-family: Concert-One;
+		font-size: 14pt;
+		line-height: 0.8;
+		text-shadow: 1px 1px 3px black;
+	}
+	.header-content .header-menu{ margin-top: 0px; }
+	.header-content .header-menu li a i{ font-size: 26pt;}
+	/* Header End */
+
+	/* Post Start */
+
+	.content .content-post{ background-color: white; padding-top: 1em;}
+	.content-post .post-title{ font-size: 19pt; }
+	.content-post .post-author{ font-size: 10pt; }
+	.content-post .post-paragraph{ font-size: 12pt; }
+
+	/* Post End*/
+}
