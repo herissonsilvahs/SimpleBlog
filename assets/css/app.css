@@ -28,12 +28,18 @@
 	src: url('../fonts/Cormorant_Garamond/CormorantGaramond-Bold.ttf') format('truetype');
 }
 
-.grid-container { max-width: 95rem; background: rgb(250, 250, 250); } /* Sobrescrevendo valor padrão do framework */
+/* Sobrescrevendo valor padrão do framework */
+.grid-container { max-width: 95rem; background: rgb(250, 250, 250); } 
 
 /* Header Start */
 
 .header{ background: #303F9F; height: 10em; text-align: center; margin-bottom: 2em;}
-.header-content{ width: 100%; height: 100%; padding-top: 3.5em; box-shadow: 0px 1px 4px black;}
+.header-content{
+	width: 100%;
+	height: 100%;
+	padding-top: 3.5em;
+	box-shadow: 0px 1px 4px black;
+}
 .header-content #header-title{
 	color: #EDEDED;
 	font-family: Cormorant-Unicase; 
@@ -57,16 +63,16 @@
 
 /* Post Start */
 
-.content-post{ margin-bottom: 2em; }
+.post-content{ margin-bottom: 4em; }
 
-.content-post .post-title{
+.post-content .post-title{
 	font-family: Amatic-SC;
 	font-style: bold;
 	font-size: 17pt;
 	line-height: 1.0;
 	text-shadow: 1px 1px 1px black;
 }
-.content-post .post-author{ font-size: 8pt; font-family: Amatic-SC;}
+.post-content .post-author{ font-size: 8pt; font-family: Amatic-SC;}
 .post-author .post-subject{
 	background: blue;
 	color: white; 
@@ -81,16 +87,57 @@
 .post-subject.brown{ background: brown; }
 .post-subject.purple{ background: purple; }
 
-.content-post .post-paragraph{
+.post-content .post-paragraph{
 	font-family: Cormorant-Garamond; 
 	font-size: 11pt;
 	text-align: justify; 
 	word-wrap: break-word;
 	margin-top: 10px;
 }
-.content-post .post-date{ font-size: 9pt; font-family: Amatic-SC; float: right;}
+.post-content .post-classifi{
+	font-size: 15pt;
+	margin-left: 1em;
+	margin-right: 3px;
+	color: black;
+}
+.post-content .post-classifi:hover{ color: red; }
+.post-content .post-date{ font-size: 9pt; font-family: Amatic-SC; margin-bottom: 1em;}
 
 /* Post End*/
+
+
+.content-aside #recent-posts{ margin-top: 1em; }
+.content-aside #recent-posts h1{ font-size: 16pt; font-family: Cormorant-Unicase; }
+.content-aside #recent-posts .post-item h1{ font-size: 14pt; font-family: Amatic-SC; }
+.content-aside #recent-posts .post-item p{
+	font-size: 10pt;
+	font-family: Cormorant-Garamond;
+	margin-bottom: 0;
+}
+.content-aside #recent-posts .post-item a{
+	font-size: 10pt;
+	background-color: rgb(10, 18, 71);
+	padding: 3px;
+	padding-left: 6px;
+	padding-right: 6px;
+	font-style: bold; 
+	color: white;
+}
+
+.content-aside #recent-posts .post-item a:hover{
+	color: rgb(10, 18, 71);
+	background: white;
+}
+
+.content-aside #recent-posts .post-item hr{
+	margin-top: 2em;
+}
+
+.content-aside #categories h1{ font-size: 16pt; font-family: Cormorant-Unicase;}
+
+.content-aside #categories a{ color: black; }
+.content-aside #categories a:hover i{ color: red; }
+.content-aside #categories a i{ margin-right: 5px; }
 
 /* Medium and up */
 @media screen and (min-width: 40em)
@@ -116,10 +163,20 @@
 
 	/* Post Start */
 
-	.content .content-post{ background-color: white; padding-top: 1em;}
-	.content-post .post-title{ font-size: 19pt; }
-	.content-post .post-author{ font-size: 10pt; }
-	.content-post .post-paragraph{ font-size: 12pt; }
+	.content .post-content{ background-color: white; margin-top: 1em; padding: 1em;}
+	.post-content{ height: auto; }
+	.post-content .post-title{ font-size: 19pt; }
+	.post-content .post-author{ font-size: 10pt; }
+	.post-content .post-paragraph{ font-size: 12pt; }
 
 	/* Post End*/
+
+	.content-aside #recent-posts #title{ font-size: 14pt; }
+	.content-aside #recent-posts .post-item h1{ font-size: 12pt; font-style: italic; }
+	.content-aside #recent-posts .post-item p{ font-size: 10pt; }
+	.content-aside #recent-posts .post-item a{ font-size: 10pt; }
+}
+
+@media screen and (min-width: 64em){
+
 }
