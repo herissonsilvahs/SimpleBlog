@@ -1,11 +1,6 @@
 *{ padding: 0; }
 
 @font-face{
-	font-family: 'Cinzel';
-	src: url('../fonts/Cinzel/Cinzel-Regular.ttf') format('truetype');
-}
-
-@font-face{
 	font-family: 'Concert-One';
 	src: url('../fonts/Concert_One/ConcertOne-Regular.ttf') format('truetype');
 }
